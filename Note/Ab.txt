@@ -1,0 +1,6 @@
+public class Abcd {
+	static {
+		System.out.println("Gani");
+		System.exit(0);
+	}
+}
