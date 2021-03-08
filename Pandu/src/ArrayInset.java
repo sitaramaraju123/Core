@@ -32,6 +32,19 @@ public class ArrayInset {
 			  int n =pre.executeUpdate();
 			  System.out.println(n+ " Rows of Data Inserted Successfully..");
 		}
+		
+		String query1 = " insert into test (sno, name, age,city) values (?, ?, ?, ?)";
+		PreparedStatement pre1 = con.prepareStatement(query1);
+		for(In a2:a) {
+			pre1.setInt(1, a2.n);
+			pre1.setString(2, a2.name);
+			pre1.setInt(3, a2.age);
+			pre1.setString(4, a2.city);
+			int n =pre1.executeUpdate();
+			System.out.println(n+ " Rows of Data Inserted Successfully..");
+		}
+		con.close();
+		
 	}
 
 }
